@@ -1,0 +1,44 @@
+name: Build, Verify and Publish
+
+on:
+  push:
+    branches: [ main, master, arxiv_literature_search_automation ]
+  pull_request:
+    branches: [ main, master, arxiv_literature_search_automation ]
+  workflow_dispatch:
+
+jobs:
+  build-and-verify:
+    name: Build, Verify and Check Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Verify Backend Syntax & Quality
+        run: npm test
+
+      - name: Build Frontend Application (Vite)
+        run: npm run build
+
+      - name: Upload Production Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: nexus-studio-dist
+          path: dist/
+          retention-days: 7
+
+      - name: Verify Executable Permissions
+        run: |
+          chmod +x start.sh
+          test -x start.sh && echo "✅ start.sh is executable"
