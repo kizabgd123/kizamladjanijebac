@@ -1,0 +1,7 @@
+node_modules
+dist
+.git
+.github
+*.log
+WORK_LOG.md
+devpost-mcp-server

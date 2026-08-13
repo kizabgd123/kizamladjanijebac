@@ -55,24 +55,30 @@ cd kizamladjanijebac
 npm install
 ```
 
-### 3. Pokrenite Aplikaciju (Jedna Komanda)
+### 3. Pokrenite Aplikaciju (Lokalno ili na Google Cloud)
 
-Izvršite pripremljenu pokretačku skriptu:
+**Lokalno pokretanje (Jedna Komanda):**
 
 ```bash
 ./start.sh
 ```
 
-**Šta ova komanda automatski radi:**
+**Produkciono pokretanje na Google Cloud Run:**
+
+```bash
+./deploy-cloud.sh
+```
+
+**Šta ova skripta automatski radi:**
 1. Proverava i kompajlira produkcioni frontend bundle (`npm run build`).
-2. Oslobađa port `5000` ukoliko je bio zauzet.
-3. Pokreće Express Node.js backend koji istovremeno servira i API i statički web interfejs.
+2. Kontejnerizuje aplikaciju pomoću `Dockerfile`.
+3. Pokreće Express Node.js backend koji servira API i statički web interfejs na Google Cloud Run / portu `5000`.
 
 ### 4. Otvorite u Pretraživaču
 
 Otvorite veb pretraživač i idite na:
 
-👉 **`http://localhost:5000`**
+👉 **`http://localhost:5000`** (ili generisani Google Cloud Run URL)
 
 ---
 

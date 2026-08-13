@@ -13,3 +13,5 @@
 ✅ Completed Publish GitHub Workflow and Documentation
 🟡 Starting Devpost Hackathon Audit Verification
 ✅ Completed Devpost Hackathon Audit Verification
+🟡 Starting Cloud Deployment Setup and Hackathon Preparation
+✅ Completed Cloud Deployment Setup and Hackathon Preparation
