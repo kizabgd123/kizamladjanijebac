@@ -8,3 +8,4 @@
 
 🟡 Starting Initializing Project Architecture & Setup
 ✅ Completed Initializing Project Architecture & Setup
+✅ Completed Create Startup Script
