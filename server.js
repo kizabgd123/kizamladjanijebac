@@ -14,8 +14,8 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const NLM_BIN = '/home/kizamladjanijebac/.local/bin/nlm';
-const GEMINI_BIN = '/home/kizamladjanijebac/.local/bin/gemini';
+const NLM_BIN = process.env.NLM_BIN || (fs.existsSync('/home/kizamladjanijebac/.local/bin/nlm') ? '/home/kizamladjanijebac/.local/bin/nlm' : 'nlm');
+const GEMINI_BIN = process.env.GEMINI_BIN || (fs.existsSync('/home/kizamladjanijebac/.local/bin/gemini') ? '/home/kizamladjanijebac/.local/bin/gemini' : 'gemini');
 
 // Primary notebook - ArXiv ML/Addiction research with 53+ sources
 const DEFAULT_NOTEBOOK_ID = '6ff0940a-21ee-4111-beda-fd5fe1edb7e9';
@@ -214,8 +214,8 @@ app.post('/api/agents/orchestrate', async (req, res) => {
   agentLogs.push(`[Agent-2: RAG Engine] 🔍 Slanje upita NotebookLM beležnici [${targetNotebookId}]...`);
 
   // Step 2: Execute Live RAG query with nlm notebook query -j
-  const cleanPrompt = prompt.replace(/"/g, "'").replace(/\n/g, ' ');
-  const ragCmd = `${NLM_BIN} notebook query ${targetNotebookId} "${cleanPrompt}" -j`;
+  let cleanPrompt = prompt.replace(/"/g, "'").replace(/\n/g, ' ').replace(/^[\s\-]+/, '').trim() || prompt;
+  const ragCmd = `${NLM_BIN} notebook query -j ${targetNotebookId} "${cleanPrompt}"`;
   const ragRes = await runCliCommand(ragCmd, 90000);
 
   let ragAnswer = '';
@@ -371,8 +371,8 @@ app.post('/api/modules/:id/test', async (req, res) => {
   if (!question) return res.status(400).json({ success: false, message: 'Pitanje je obavezno' });
 
   const targetNb = mod.notebookId || DEFAULT_NOTEBOOK_ID;
-  const cleanQ = question.replace(/"/g, "'").replace(/\n/g, ' ');
-  const cmd = `${NLM_BIN} notebook query ${targetNb} "${cleanQ}" -j`;
+  let cleanQ = question.replace(/"/g, "'").replace(/\n/g, ' ').replace(/^[\s\-]+/, '').trim() || question;
+  const cmd = `${NLM_BIN} notebook query -j ${targetNb} "${cleanQ}"`;
 
   const cliRes = await runCliCommand(cmd, 90000);
   const parsed = cliRes.success ? parseNlmJson(cliRes.stdout) : null;

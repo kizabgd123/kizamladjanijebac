@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "server": "node server.js",
-    "start": "concurrently \"npm run server\" \"npm run dev\"",
+    "start": "./start.sh",
     "build": "vite build",
+    "test": "node --check server.js",
     "lint": "vite build"
   },
   "dependencies": {
