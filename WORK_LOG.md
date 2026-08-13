@@ -15,3 +15,6 @@
 ✅ Completed Devpost Hackathon Audit Verification
 🟡 Starting Cloud Deployment Setup and Hackathon Preparation
 ✅ Completed Cloud Deployment Setup and Hackathon Preparation
+🟡 Starting Deploying Application to Google Cloud Run Live
+🟡 Starting Verify Application Local Server Execution
+✅ Completed Verify Application Local Server Execution
