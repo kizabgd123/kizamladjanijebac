@@ -8,6 +8,12 @@ import sys
 import time
 
 def check_work_log(action: str) -> bool:
+    """
+    Validate that the current working directory contains a readable work log with an activity marker.
+    
+    Returns:
+        bool: `true` if the log contains a recognized activity marker, `false` otherwise.
+    """
     work_log_path = os.path.join(os.getcwd(), "WORK_LOG.md")
     if not os.path.exists(work_log_path):
         print("🛑 WORK_LOG.md not found. Required before action.")
@@ -26,6 +32,11 @@ def check_work_log(action: str) -> bool:
     return False
 
 def main():
+    """Validate the requested action against the work log and report approval.
+    
+    Exits with status 1 when no action is provided or the work log is invalid;
+    otherwise exits with status 0.
+    """
     if len(sys.argv) < 2:
         print("Usage: python3 judge_guard.py '<action_description>'")
         sys.exit(1)
