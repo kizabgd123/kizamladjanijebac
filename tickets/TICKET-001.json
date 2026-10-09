@@ -1,0 +1,81 @@
+{
+  "id": "TICKET-001",
+  "title": "Oslobađanje Sudo u JudgeGuard, Prelazak na Gemini 3.8 Flash i Uspostavljanje Tiket Verifikatora",
+  "description": "Uklanjanje veštačkih zabrana za sudo iz JudgeGuard-a, prelazak sa preopterećenih Gemini 3.7/3.6 modela na 3.8-flash, postavljanje Key Vault zaštite sa lozinkom i uspostavljanje strogog Tiket Verifikatora.",
+  "status": "VERIFIED_COMPLETE",
+  "created_at": "2026-10-09T14:00:00Z",
+  "verification_suite": [
+    {
+      "name": "Provera da je sudo uklonjen iz dangerous_keywords u judge_guard.py",
+      "type": "command",
+      "command": "python3 -c \"content = open('/home/kizamladjanijebac/judge_guard.py').read(); assert 'sudo' not in content[content.find('def _is_dangerous_command'):content.find('def _is_write_operation')]; print('OK: sudo dozvoljen')\"",
+      "expected_exit_code": 0
+    },
+    {
+      "name": "Provera da je gemini-3.8-flash primarni model u gemini_client.py",
+      "type": "command",
+      "command": "python3 -c \"content = open('/home/kizamladjanijebac/Desktop/judge-guard-core-master/src/antigravity_core/gemini_client.py').read(); assert 'gemini-3.8-flash' in content; print('OK: gemini-3.8-flash aktivan')\"",
+      "expected_exit_code": 0
+    },
+    {
+      "name": "Provera da je GEMINI_MODEL postavljen na gemini-3.8-flash u .env",
+      "type": "file_contains",
+      "path": "/home/kizamladjanijebac/Desktop/judge-guard-core-master/.env",
+      "contains": "GEMINI_MODEL=gemini-3.8-flash"
+    },
+    {
+      "name": "Provera postojanja i izvršivosti unlock_vault.py",
+      "type": "command",
+      "command": "test -x /home/kizamladjanijebac/unlock_vault.py",
+      "expected_exit_code": 0
+    },
+    {
+      "name": "Provera postojanja i izvršivosti ticket_guard.py",
+      "type": "command",
+      "command": "test -x /home/kizamladjanijebac/ticket_guard.py",
+      "expected_exit_code": 0
+    },
+    {
+      "name": "Provera sintakse za judge_guard.py",
+      "type": "command",
+      "command": "python3 -m py_compile /home/kizamladjanijebac/judge_guard.py",
+      "expected_exit_code": 0
+    },
+    {
+      "name": "Provera sintakse za ticket_guard.py",
+      "type": "command",
+      "command": "python3 -m py_compile /home/kizamladjanijebac/ticket_guard.py",
+      "expected_exit_code": 0
+    }
+  ],
+  "verification_results": [
+    {
+      "name": "Provera da je sudo uklonjen iz dangerous_keywords u judge_guard.py",
+      "status": "PASSED"
+    },
+    {
+      "name": "Provera da je gemini-3.8-flash primarni model u gemini_client.py",
+      "status": "PASSED"
+    },
+    {
+      "name": "Provera da je GEMINI_MODEL postavljen na gemini-3.8-flash u .env",
+      "status": "PASSED"
+    },
+    {
+      "name": "Provera postojanja i izvršivosti unlock_vault.py",
+      "status": "PASSED"
+    },
+    {
+      "name": "Provera postojanja i izvršivosti ticket_guard.py",
+      "status": "PASSED"
+    },
+    {
+      "name": "Provera sintakse za judge_guard.py",
+      "status": "PASSED"
+    },
+    {
+      "name": "Provera sintakse za ticket_guard.py",
+      "status": "PASSED"
+    }
+  ]
+}

@@ -9,18 +9,26 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 ACTIVE_MODELS: List[str] = [
-    "gemini-3.7-flash",
-    "gemini-3.6-flash",
+    "gemini-3.8-flash",
+    "gemini-flash-latest",
     "gemini-3.5-flash",
-    "gemini-3.8-flash"
+    "gemini-3.5-flash-lite",
+    "gemini-3.6-flash"
 ]
+
+class VaultLockError(RuntimeError):
+    """Raised when API keys are exhausted or locked, requiring user password."""
+    pass
 
 class GeminiClient:
     """
     Client for interacting with Google's modern Gemini models via google-genai.
+    Includes key rotation and password-protected vault security.
     """
+    VAULT_HASH_PATH = os.path.expanduser("~/.key_vault.hash")
+
     def __init__(self, model_name: Optional[str] = None, api_keys: Optional[str] = None):
-        selected_model = model_name or os.getenv("GEMINI_MODEL") or "gemini-3.7-flash"
+        selected_model = model_name or os.getenv("GEMINI_MODEL") or "gemini-3.8-flash"
         if selected_model.startswith("models/"):
             selected_model = selected_model.replace("models/", "")
         self.model_name = selected_model
@@ -35,7 +43,7 @@ class GeminiClient:
                 self.api_keys = ["MOCK_KEY"]
                 self.mock_mode = True
             else:
-                raise ValueError("CRITICAL: GEMINI_API_KEY is missing! Mock mode is strictly forbidden.")
+                self._trigger_vault_lock("GEMINI_API_KEY nedostaje!")
         else:
             self.api_keys = [k.strip() for k in keys_env.split(",") if k.strip()]
             self.mock_mode = False
@@ -43,6 +51,17 @@ class GeminiClient:
         self.current_key_index = 0
         self.client = None
         self._configure_client()
+
+    def _trigger_vault_lock(self, reason: str):
+        """Halts system and requires user password to unlock or change keys."""
+        msg = (
+            f"🔒 VAULT ZAKLJUČAN! Razlog: {reason}\n"
+            f"Svi API ključevi su nedostupni ili je konfiguracija zaključana.\n"
+            f"Sistem se NE MOŽE menjati niti nastaviti bez unosa vaše šifre!\n"
+            f"Pokrenite: python3 unlock_vault.py za unos šifre i novih ključeva."
+        )
+        logger.error(msg)
+        raise VaultLockError(msg)
 
     def _configure_client(self):
         if getattr(self, "mock_mode", False):
@@ -59,11 +78,11 @@ class GeminiClient:
 
     def _rotate_key(self) -> bool:
         if len(self.api_keys) <= 1:
-            logger.warning("Only one API key available. Cannot rotate key.")
+            logger.warning("Samo jedan API ključ je dostupan. Rotacija nije moguća.")
             return False
             
         self.current_key_index = (self.current_key_index + 1) % len(self.api_keys)
-        logger.warning(f"🔄 Rotating API Key to #{self.current_key_index + 1}")
+        logger.warning(f"🔄 Rotiram API ključ na indeks #{self.current_key_index + 1}")
         self._configure_client()
         return True
 
@@ -90,7 +109,7 @@ class GeminiClient:
                     last_exception = e
                     err_msg = str(e)
                     logger.warning(f"Attempt with model {model_candidate} failed: {err_msg.splitlines()[0]}")
-                    if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg:
+                    if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg or "403" in err_msg:
                         if self._rotate_key():
                             continue
                         time.sleep(1.5)
@@ -103,7 +122,7 @@ class GeminiClient:
                     else:
                         time.sleep(1.0)
 
-        raise RuntimeError(f"All Gemini models exhausted. Last error: {last_exception}")
+        self._trigger_vault_lock(f"Svi Gemini modeli i ključevi su iscrpljeni ili blokirani! Poslednja greška: {last_exception}")
 
     def judge_content(self, content: str, criteria: str) -> bool:
         prompt = f"""
