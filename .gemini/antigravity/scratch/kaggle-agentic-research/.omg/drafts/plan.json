@@ -1,0 +1,38 @@
+{
+  "intent": "Collect and read completely the public material on how top Kaggle participants run agentic research workflows, and store it as sourced files for later use. Research only: no models, no experiments, no Kaggle submission, no changes to existing code, no changes to the NotebookLM notebook.",
+  "criteria": [
+    "source-retrieval",
+    "literal-quotes",
+    "validator-integrity"
+  ],
+  "files": [
+    "research/sources/s6e11_756276.md",
+    "research/sources/kgmon_playbook.md",
+    "research/discoveries/reading_notes.md",
+    "scripts/check_sources.py"
+  ],
+  "testFiles": [
+    "scripts/check_sources.py"
+  ],
+  "checks": [
+    {
+      "id": "check-sources",
+      "argv": ["python3", "scripts/check_sources.py"],
+      "files": [
+        "research/sources/s6e11_756276.md",
+        "research/sources/kgmon_playbook.md",
+        "research/discoveries/reading_notes.md",
+        "scripts/check_sources.py"
+      ],
+      "criteria": [
+        "source-retrieval",
+        "literal-quotes",
+        "validator-integrity"
+      ],
+      "inputs": [
+        "scripts/check_sources.py"
+      ],
+      "expectation": "check_sources.py verifies each source file exists, is non-empty, contains retrieval command and comment count, and every quote in reading_notes.md appears literally."
+    }
+  ]
+}

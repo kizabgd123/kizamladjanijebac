@@ -1,0 +1,37 @@
+{
+  "queue": [
+    {
+      "exp_id": "EXP-001",
+      "hypothesis_id": "HYP-001",
+      "description": "Execute test_runnability.py to verify scripts.agent root_agent import isolation",
+      "status": "QUEUED",
+      "priority": 1,
+      "parameters": {
+        "target": "tests/test_runnability.py",
+        "working_dir": "/home/kizamladjanijebac/Desktop/discord-openclaw/.agents/skills/retail-product-search"
+      }
+    },
+    {
+      "exp_id": "EXP-002",
+      "hypothesis_id": "HYP-002",
+      "description": "Inspect and parse YAML frontmatter on assets/design-spec.md to verify schema safety",
+      "status": "QUEUED",
+      "priority": 2,
+      "parameters": {
+        "target": "assets/design-spec.md",
+        "working_dir": "/home/kizamladjanijebac/Desktop/discord-openclaw/.agents/skills/retail-product-search"
+      }
+    },
+    {
+      "exp_id": "EXP-003",
+      "hypothesis_id": "HYP-003",
+      "description": "Audit EVAL.yaml assertion coverage across schema tiers and failure boundaries",
+      "status": "QUEUED",
+      "priority": 3,
+      "parameters": {
+        "target": "EVAL.yaml",
+        "working_dir": "/home/kizamladjanijebac/Desktop/discord-openclaw/.agents/skills/retail-product-search"
+      }
+    }
+  ]
+}

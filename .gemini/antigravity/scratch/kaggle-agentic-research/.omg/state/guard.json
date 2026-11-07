@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "guardVersion": 2,
+  "owner": "9b9eef0a-f066-4df2-8502-dd82da1a53e3",
+  "phase": "research",
+  "cycle": 0,
+  "nudges": 0,
+  "locks": {},
+  "issues": [],
+  "batch": [],
+  "reviews": {},
+  "updatedAt": "2026-11-06T22:21:42.850Z",
+  "revision": 84,
+  "reading": {
+    "research/sources/s6e11_756276.md": {
+      "hash": "29680d0f15b2f2ed3c56da24992315f98bad2529cc3bdd18499934f15ee4fa7f",
+      "bytes": 4930,
+      "ranges": [
+        [
+          0,
+          4930
+        ]
+      ],
+      "complete": true
+    },
+    "research/sources/s6e3_686686.md": {
+      "hash": "d47787578a2fdd8480f9b1e4ca860c5e18f0de8b7f30aa56ab2d2f8a3c5e271f",
+      "bytes": 79090,
+      "ranges": [
+        [
+          0,
+          79090
+        ]
+      ],
+      "complete": true
+    },
+    "research/sources/s6e8_738592.md": {
+      "hash": "c2381ba37f421f729c149914df3228b9552576cfe99b61f6b82b5c652e89f855",
+      "bytes": 51107,
+      "ranges": [
+        [
+          0,
+          51107
+        ]
+      ],
+      "complete": true
+    },
+    "research/sources/s6e5_703615.md": {
+      "hash": "ee5797984038f01135577c2a59844dc16b96d49454bcb84cc107ca7ba82fe589",
+      "bytes": 24619,
+      "ranges": [
+        [
+          0,
+          24619
+        ]
+      ],
+      "complete": true
+    },
+    "research/sources/s6e9_745013.md": {
+      "hash": "08d40df942cc07986f026a25292f409d707ffb9c9fd4ccc8f50b10ec48007473",
+      "bytes": 29551,
+      "ranges": [
+        [
+          0,
+          29551
+        ]
+      ],
+      "complete": true
+    },
+    "research/sources/kgmon_playbook.md": {
+      "hash": "0c5e09f152c47b3add22c76f65d2c9274724a2bcc9573510737943c607d9697a",
+      "bytes": 1317,
+      "ranges": [
+        [
+          0,
+          1317
+        ]
+      ],
+      "complete": true
+    }
+  }
+}

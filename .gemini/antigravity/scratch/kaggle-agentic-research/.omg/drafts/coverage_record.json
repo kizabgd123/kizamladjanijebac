@@ -1,0 +1,32 @@
+{
+  "research/sources/s6e11_756276.md": {
+    "total_bytes": 4930,
+    "windows": 2,
+    "complete": true
+  },
+  "research/sources/s6e3_686686.md": {
+    "total_bytes": 79090,
+    "windows": 20,
+    "complete": true
+  },
+  "research/sources/s6e8_738592.md": {
+    "total_bytes": 51107,
+    "windows": 13,
+    "complete": true
+  },
+  "research/sources/s6e5_703615.md": {
+    "total_bytes": 24619,
+    "windows": 7,
+    "complete": true
+  },
+  "research/sources/s6e9_745013.md": {
+    "total_bytes": 29551,
+    "windows": 8,
+    "complete": true
+  },
+  "research/sources/kgmon_playbook.md": {
+    "total_bytes": 1317,
+    "windows": 1,
+    "complete": true
+  }
+}

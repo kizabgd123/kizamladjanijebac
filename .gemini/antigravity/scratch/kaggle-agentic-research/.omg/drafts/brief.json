@@ -1,0 +1,35 @@
+{
+  "objective": "Collect and read completely the public material on how top Kaggle participants run agentic research workflows, and store it as sourced files for later use. Research only: no models, no experiments, no Kaggle submission, no changes to existing code, no changes to the NotebookLM notebook.",
+  "risk": "routine",
+  "constraints": [
+    "Only publicly accessible content",
+    "No model-generated text is ever stored as a source",
+    "No Kaggle submission or code execution",
+    "No upgrading of the kaggle CLI"
+  ],
+  "nonGoals": [
+    "Do not train or run machine learning models",
+    "Do not run experiments",
+    "Do not modify NotebookLM notebooks",
+    "Do not make competition submissions"
+  ],
+  "decisions": [
+    {
+      "id": "public_source_access",
+      "owner": "user",
+      "status": "resolved",
+      "question": "Which public sources should be targeted?",
+      "answer": "Playground Series s6e11 topic 756276, KGMON-Playbook-2026 repo, and reachable S6E9/S6E8/S6E5/S6E3 threads",
+      "basis": "Specified directly in user request scope"
+    },
+    {
+      "id": "validator_policy",
+      "owner": "user",
+      "status": "resolved",
+      "question": "How should check_sources.py verify findings?",
+      "answer": "Ensure files exist, are non-empty, contain retrieval command and comment count, and quotes under 25 words appear literally",
+      "basis": "Specified directly in user check criteria"
+    }
+  ],
+  "conflicts": []
+}

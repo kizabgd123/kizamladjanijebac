@@ -1,1 +1,7 @@
 node_modules/
+
+# CodyMaster working memory
+.cm/
+.agent-browser/
+.worktrees/
+.gemini/antigravity/worktrees/
