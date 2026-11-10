@@ -1,0 +1,16 @@
+# Dodaj u ~/.hermes/config.yaml (kljuc mora biti tacno `mcp_servers`)
+mcp_servers:
+  filesystem:
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-filesystem", "/home/USER/projects"]
+  github:
+    url: "https://api.githubcopilot.com/mcp/"
+    headers:
+      Authorization: "Bearer ${GITHUB_TOKEN}"   # vrednost ide u ~/.hermes/.env
+    timeout: 180
+    connect_timeout: 30
+    trust: untrusted
+  custom_tools:
+    command: "python3"
+    args: ["/ABS/PATH/agy-hermes-kit/custom_tools/my_tool_server.py"]
+# Posle izmene u Hermes sesiji: /reload-mcp

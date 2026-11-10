@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/USER/projects"]
+    },
+    "github": {
+      "serverUrl": "https://api.githubcopilot.com/mcp/",
+      "headers": { "Authorization": "Bearer REPLACE_WITH_TOKEN" },
+      "disabled": false
+    },
+    "custom_tools": {
+      "command": "python3",
+      "args": ["/ABS/PATH/agy-hermes-kit/custom_tools/my_tool_server.py"]
+    }
+  }
+}

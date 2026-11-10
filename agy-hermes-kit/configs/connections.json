@@ -1,0 +1,35 @@
+{
+  "_comment": "Jedinstveni izvor istine za Antigravity i Hermes MCP servere. ${BUNDLE_DIR} i ${PROJECTS_DIR} se automatski zamenjuju.",
+  "servers": {
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${PROJECTS_DIR}"]
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": { "Authorization": "Bearer ${GITHUB_TOKEN}" }
+    },
+    "chrome-devtools": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"]
+    },
+    "linear": {
+      "type": "http",
+      "url": "https://mcp.linear.app/mcp",
+      "headers": { "Authorization": "Bearer ${LINEAR_API_KEY}" }
+    },
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp",
+      "headers": { "Authorization": "Bearer ${SUPABASE_ACCESS_TOKEN}" }
+    },
+    "custom_tools": {
+      "type": "stdio",
+      "command": "python3",
+      "args": ["${BUNDLE_DIR}/custom_tools/my_tool_server.py"]
+    }
+  }
+}
