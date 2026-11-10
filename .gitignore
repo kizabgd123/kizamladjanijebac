@@ -1,7 +1,13 @@
 node_modules/
 
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
 # CodyMaster working memory
 .cm/
 .agent-browser/
 .worktrees/
 .gemini/antigravity/worktrees/
+

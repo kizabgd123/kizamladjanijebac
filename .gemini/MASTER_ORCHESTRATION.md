@@ -55,15 +55,6 @@ All code must be reviewed before merging. No "make it work" PRs without verifiab
 
 Actions must not deviate more than 20% from Project Essence (see PROJECT_ESSENCE in judge_guard.py).
 
-### Dangerous Command Blacklist
-
-- `sudo` (privilege escalation)
-- `rm -rf /` (root deletion)
-- `rm -rf /*` (root deletion variant)
-- `chmod -R 777` (world-writable)
-
----
-
 ## 📋 Project Essence
 
 **Goal:** Build an autonomous, self-improving AI agent system (Antigravity).
@@ -111,10 +102,11 @@ Before ANY major action:
 - The `firebase-mcp-server` MCP resource `ui://core/deploy/mcp-app.html` is **broken** (upstream ENOENT).
 - **DO NOT** block on or retry MCP resource reads from `firebase-mcp-server`.
 - **ALWAYS** use native Firebase CLI for all deployment operations:
+
   ```bash
   npx -y firebase-tools@latest deploy
   npx -y firebase-tools@latest deploy --only hosting
   npx -y firebase-tools@latest deploy --only functions
   ```
-- MCP tools from `firebase-mcp-server` may still be used for non-resource operations (auth, project listing).
 
+- MCP tools from `firebase-mcp-server` may still be used for non-resource operations (auth, project listing).

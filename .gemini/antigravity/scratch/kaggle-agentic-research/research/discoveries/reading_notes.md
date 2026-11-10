@@ -1,117 +1,164 @@
-# Reading Notes: Agentic Research Workflows on Kaggle (2026)
+# Research Reading Notes
+# Kaggle Agentic Workflow Sources
 
-This document collects documented, concrete practices adopted by top competitive data scientists using agentic research workflows on Kaggle in 2026.
-
----
-
-## Source: `s6e11_756276.md`
-- **Location:** Kaggle Playground Series s6e11 Discussion, Topic #756276 ("Sharing Code for 500 Models!")
-- **Author:** Chris Deotte
-- **Status:** READ
-
-### Practice 1: Human-Guided Agent Code Generation
-- **Practice:** The author guided LLM agents to write all solution code across six consecutive competitions rather than writing models manually.
-- **Quote:** [QUOTED] source: s6e11_756276.md "All of these solutions' code was written by agents with me guiding them."
-- **Location:** Opening post, paragraph 2.
-
-### Practice 2: Open-Sourcing Agent Training Repositories
-- **Practice:** The author shared 500 complete model source scripts to serve as training corpora and few-shot bases for future data science agents.
-- **Quote:** [QUOTED] source: s6e11_756276.md "This shared code gives everyone's agents 500 models of source code to train their agents for current and future tabular data competitions!"
-- **Location:** Opening post, paragraph 2.
+Generated: 2026-11-07
+Order: s6e11_756276 → s6e3_686686 → s6e8_738592 → s6e5_703615 → s6e9_745013 → kgmon_playbook
+Coverage record: .omg/drafts/coverage_record.json (all 6 sources: complete=True)
 
 ---
 
-## Source: `s6e9_745013.md`
-- **Location:** Kaggle Playground Series s6e9 Discussion, Topic #745013 ("1st Place - The AI Relay!")
-- **Author:** Chris Deotte
-- **Status:** READ
+## Source 1: s6e11_756276.md
+**File:** research/sources/s6e11_756276.md  
+**Command:** `kaggle competitions topic-messages playground-series-s6e11 756276 -v`  
+**Comment Count (recorded):** 5 | **Comment Count (computed from file):** 5 ✓  
+**OmA Coverage:** 2 windows, complete=True, 4,930 bytes  
+**Status:** READ
 
-### Practice 1: Multi-Generational Agent Relay
-- **Practice:** The author operated a 3-stage relay where successive generations of frontier models iteratively improved upon the previous agent's codebase.
-- **Quote:** [QUOTED] source: s6e9_745013.md "We passed one codebase between three generations of AI agents, like the baton in a relay race:"
-- **Location:** Opening post, section "1st Place - The AI Relay", paragraph 2.
+### What the author DID
 
-### Practice 2: Persistent Notes as State Transfer
-- **Practice:** To overcome session context wiping between agent runs, the author used shared code files and written markdown notes as the state-handoff mechanism.
-- **Quote:** [QUOTED] source: s6e9_745013.md "The baton was our code and our notes."
-- **Location:** Opening post, section "The Baton Is The Notes", paragraph 1.
+1. Open-sourced previous 6 Kaggle Playground competition solutions (S6E3–S6E10), giving agents 500 models of source code to train on.  
+   [QUOTED] source: s6e11_756276.md "code was written by agents with me guiding them" (L24, 9 words)
 
-### Practice 3: Human Role Evolution to Referee
-- **Practice:** The human practitioner stopped micromanaging agent execution and acted as a referee evaluating handoffs and making final submission calls.
-- **Paraphrase:** [PARAPHRASED] The author shifted from direct coder to manager, then coach, and ultimately referee as inter-agent handoffs matured.
-- **Location:** Opening post, section "The Relay Race", paragraph 1.
+2. Framed the shared code as training material for other agents on future tabular competitions.  
+   [PARAPHRASED] L24–L25: author stated the release gives agents source code to train on for current and future competitions.
 
----
+### Claims made without evidence
 
-## Source: `s6e8_738592.md`
-- **Location:** Kaggle Playground Series s6e8 Discussion, Topic #738592 ("1st Place - Distributed Intelligence - NVIDIA Inference Hub")
-- **Author:** Chris Deotte
-- **Status:** READ
-
-### Practice 1: Competitive Agent Pairing
-- **Practice:** The author paired two different frontier agents against each other to independently build single NN and XGB models.
-- **Quote:** [QUOTED] source: s6e8_738592.md "We then challenged Codex GPT 5.6 Sol to compete against Claude Code Fable 5 to see who can make the best single NN model"
-- **Location:** Opening post, section "Phase 2 - GPT 5.6 Sol battles Fable 5", paragraph 1.
-
-### Practice 2: Dynamic Cross-Pollination of Tips
-- **Practice:** When one competing agent stalled, the author transferred techniques and tips discovered by the leading agent to the trailing agent.
-- **Quote:** [QUOTED] source: s6e8_738592.md "When one was lagging, we would share tips from the leading agent to the trailing agent and soon the trailing agent would take the lead!"
-- **Location:** Opening post, section "Phase 2 - GPT 5.6 Sol battles Fable 5", paragraph 1.
-
-### Practice 3: Background Batch Reasoning via Archive Uploads
-- **Practice:** The author had an agent prepare tar.gz bundles and structured prompts for long-running deep reasoning instances to discover non-obvious feature transformations.
-- **Paraphrase:** [PARAPHRASED] Bundled tar.gz code and prompt packages were uploaded for multi-hour background reasoning runs to uncover new feature engineering patterns.
-- **Location:** Opening post, section "Phase 3 - ChatGPT Pro - Swarm Intelligence!", paragraph 1.
+1. Commenter (L44) claims solo model-by-model builders will increasingly be squeezed out:  
+   [QUOTED] source: s6e11_756276.md "there will be less and less room for those of us who still build and test models one by one." (L44, 22 words)  
+   *(This is a commenter prediction, not a measured result.)*
 
 ---
 
-## Source: `s6e5_703615.md`
-- **Location:** Kaggle Playground Series s6e5 Discussion, Topic #703615 ("2nd Place - Autonomous Codex Yolo!")
-- **Author:** Chris Deotte
-- **Status:** READ
+## Source 2: s6e3_686686.md
+**File:** research/sources/s6e3_686686.md  
+**Command:** `kaggle competitions topic-messages playground-series-s6e3 686686 -v`  
+**Comment Count (recorded):** 101 | **Comment Count (computed from file):** 101 ✓  
+**OmA Coverage:** 20 windows, complete=True, 79,090 bytes  
+**Status:** READ
 
-### Practice 1: Autonomous Multi-Hour Experiment Loops
-- **Practice:** The author ran autonomous CLI agent loops across multiple A100 GPUs without human micro-management.
-- **Quote:** [QUOTED] source: s6e5_703615.md "Codex wrote experiments, Codex ran the code on GPU, Codex logged the results (in local leaderboard), Codex analyzed the results"
-- **Location:** Opening post, section "Codex Runs Experiments", paragraph 2.
+### What the author DID
 
-### Practice 2: Local Markdown Leaderboard as Source of Truth
-- **Practice:** The agent maintained a versioned markdown file tracking top-10 cross-validation models to guide subsequent experiments.
-- **Quote:** [QUOTED] source: s6e5_703615.md "I asked Codex to maintain a local_leaderboard.md file with the top 10 CV score models."
-- **Location:** Opening post, section "Codex Runs Experiments", paragraph 1.
+1. Used GPT5.4, Gemini3.1, and ClaudeOpus4.6 to write all solution code; agents were instructed to follow the KGMON Playbook.  
+   [QUOTED] source: s6e3_686686.md "All of this solution's code was written by GPT5.4, Gemini3.1, ClaudeOpus4.6" (L20, 13 words)
 
----
+2. Agents wrote 600,000 lines of code in one month, built 850 models on 4xA100 GPUs, and ran 50 EDA scripts.  
+   [QUOTED] source: s6e3_686686.md "They built and trained 850 models on 4xA100 GPU and wrote and ran 50 EDA scripts!" (L22, 16 words)
 
-## Source: `s6e3_686686.md`
-- **Location:** Kaggle Playground Series s6e3 Discussion, Topic #686686 ("1st Place - GPT5.4, Gemini3.1, ClaudeOpus4.6 - KGMON Playbook!")
-- **Author:** Chris Deotte
-- **Status:** READ
+3. Prompted agents to perform their own EDA and use findings to generate new feature engineering ideas.  
+   [QUOTED] source: s6e3_686686.md "GPT5.4, Gemini3.1, ClaudeOpus4.6 were prompted to perform their own EDA to determine the relationship" (L30, 14 words)
 
-### Practice 1: Hardware-Accelerated Multi-Agent Implementation
-- **Practice:** Multiple LLMs authored 600,000 lines of code accelerated by GPU computing and RAPIDS libraries.
-- **Quote:** [QUOTED] source: s6e3_686686.md "All of this solution's code was written by GPT5.4, Gemini3.1, ClaudeOpus4.6 and experimentation was accelerated with GPU"
-- **Location:** Opening post, section "GPT5.4, Gemini3.1, ClaudeOpus4.6 and 4xA100 GPUs!", paragraph 1.
+### Claims made without evidence
 
-### Practice 2: Methodological Playbook Grounding
-- **Practice:** Agents were constrained to follow a strict sequential engineering playbook rather than improvising pipelines.
-- **Quote:** [QUOTED] source: s6e3_686686.md "These agents learned to understand and follow the KGMON Playbook for tabular data and finish 1st place!"
-- **Location:** Opening post, section "GPT5.4, Gemini3.1, ClaudeOpus4.6 and 4xA100 GPUs!", paragraph 1.
+1. Author describes the agent output as "unbelievable" (L22) without providing comparative baselines against human-only runs.
 
 ---
 
-## Source: `kgmon_playbook.md`
-- **Location:** Public GitHub Repository `cdeotte/KGMON-Playbook-2026`
-- **Author:** Chris Deotte et al. (NVIDIA Kaggle Grandmasters Team)
-- **Status:** READ
+## Source 3: s6e8_738592.md
+**File:** research/sources/s6e8_738592.md  
+**Command:** `kaggle competitions topic-messages playground-series-s6e8 738592 -v`  
+**Comment Count (recorded):** 78 | **Comment Count (computed from file):** 78 ✓  
+**OmA Coverage:** 13 windows, complete=True, 51,107 bytes  
+**Status:** READ
 
-### Practice 1: Sequential 7-Stage Tabular Methodology
-- **Practice:** The workflow enforces seven explicit, ordered pipeline phases from exploratory data analysis to pseudo-labeling.
-- **Paraphrase:** [PARAPHRASED] The playbook prescribes seven strictly ordered notebook milestones: EDA, Feature Engineering, Baselines, Stacking, Hill Climbing, Pseudo Labeling, and Conclusion.
-- **Location:** Repository root notebooks 01 through 07.
+### What the author DID
+
+1. Phase 1: deployed a single Codex GPT 5.6 Sol autorun agent that read the competition, downloaded data, built a 380-model ensemble, and auto-submitted to the leaderboard over 4 days without human intervention. (L20, [PARAPHRASED])
+
+2. Phase 2: introduced Fable 5 and a second GPT 5.6 Sol; challenged them to compete head-to-head on single NN and XGB model quality.  
+   [QUOTED] source: s6e8_738592.md "challenged Codex GPT 5.6 Sol to compete against Claude Code Fable 5 to see who can make the best single NN model" (L24, 22 words)
+
+3. Phase 3: asked Fable to build a `tar.gz` packet and prompt, manually uploaded to ChatGPT Pro in parallel, downloaded its ZIP discoveries, and fed them back to the coding agents. (L32, [PARAPHRASED])
+
+4. Ran agents independently first without giving them prior knowledge, then progressively added clues, then full public knowledge.  
+   [QUOTED] source: s6e8_738592.md "In the same way that the best human Kaggle team is where humans work independently first, i do this with my agents." (L232, 22 words)
+
+5. After every 4–12 hour campaign, instructed agents to write down all their new discoveries into discovery.md files.  
+   [QUOTED] source: s6e8_738592.md "After every 4-12 hour campaign, I had them write down all their new discoveries." (L450, 14 words)
+
+6. Used 1M+ token context, never forced context compact, so agents could re-read all discovery files and avoid repeating experiments. (L452, [PARAPHRASED])
+
+7. Used max thinking mode for breakthroughs and important EDA/feature engineering work; reduced thinking for routine coding. (L452, [PARAPHRASED])
+
+### Independent discovery notes and exchange of findings: FOUND
+
+**FOUND — independent-first approach (Msg 20, L232):**  
+> [QUOTED] source: s6e8_738592.md "In the same way that the best human Kaggle team is where humans work independently first, i do this with my agents." (L232, 22 words)
+
+**FOUND — exchange of findings between agents (Msg 45, L442 and L450):**  
+In a comment thread (Msg 45), a commenter noted complementary strengths between Fable and Codex. Deotte confirmed:  
+> [QUOTED] source: s6e8_738592.md "around Aug 28th, I shared lots of Fable's secrets with GPT which allowed GPT to use them" (L442, 17 words)  
+> [QUOTED] source: s6e8_738592.md "After every 4-12 hour campaign, I had them write down all their new discoveries." (L450, 14 words)
+
+### Claims made without evidence
+
+1. L28: "confirms that frontier models are Grandmasters at data science modeling" — a single competition win is cited as confirmation; no controlled comparison is provided.
 
 ---
 
-## Source: `s6e4_irrigation_need` (Topic #701104)
-- **Location:** Kaggle Playground Series s6e4
-- **Status:** [NOT READ]
-- **Reason:** Outside core scope focus; priority was given to the requested S6E11, S6E9, S6E8, S6E5, and S6E3 writeups and Playbook repo.
+## Source 4: s6e5_703615.md
+**File:** research/sources/s6e5_703615.md  
+**Command:** `kaggle competitions topic-messages playground-series-s6e5 703615 -v`  
+**Comment Count (recorded):** 26 | **Comment Count (computed from file):** 26 ✓  
+**OmA Coverage:** 7 windows, complete=True, 24,619 bytes  
+**Status:** READ
+
+### What the author DID
+
+1. Instructed Codex GPT5.5 to maintain a `local_leaderboard.md` file tracking the top 10 CV score models at all times.  
+   [QUOTED] source: s6e5_703615.md "I asked Codex to maintain a `local_leaderboard.md` file with the top 10 CV score models." (L26, 15 words)
+
+2. Let Codex run autonomously with 4x A100 GPUs in parallel, running experiments continuously until told to stop.  
+   [PARAPHRASED] L26: author set a stop condition and let the agent run GPU experiments in parallel without further intervention.
+
+3. Codex wrote experiments, ran code on GPU, logged results in the local leaderboard, analyzed results, and decided on further experiments — all autonomously.  
+   [QUOTED] source: s6e5_703615.md "Codex wrote experiments, Codex ran the code on GPU, Codex logged the results (in local leaderboard), Codex analyzed the results" (L30, 20 words)
+
+### Claims made without evidence
+
+1. L24: "Its ability to plan and do data science is mind blowing!" — subjective assessment without comparative metric.
+
+---
+
+## Source 5: s6e9_745013.md
+**File:** research/sources/s6e9_745013.md  
+**Command:** `kaggle competitions topic-messages playground-series-s6e9 745013 -v`  
+**Comment Count (recorded):** 26 | **Comment Count (computed from file):** 26 ✓  
+**OmA Coverage:** 8 windows, complete=True, 29,551 bytes  
+**Status:** READ
+
+### What the author DID
+
+1. Passed one codebase sequentially between three generations of AI agents (GPT-5.6 Sol + Fable 5, then GPT-6-Astra + Fable 5.1, then Opus 5.5), with two-week rest in between.  
+   [QUOTED] source: s6e9_745013.md "We passed one codebase between three generations of AI agents, like the baton in a relay race:" (L18, 17 words)
+
+2. Used code and markdown notes as the "baton" — agents inherited over 1 million lines of code from prior competitions plus 600 markdown note files.  
+   [QUOTED] source: s6e9_745013.md "The baton was **our code and our notes**" (L48, 7 words including markup; literal text in file)
+
+3. Each new agent leg built on the previous leg's CV score; the human coach set goals, chose final submissions, and passed the baton. (L48 section, [PARAPHRASED])
+
+4. Fable 5.1 wrote a public EDA notebook that found the original data's purchase recipe; human uploaded it publicly. (L in team section, [PARAPHRASED])
+
+### Claims made without evidence
+
+1. "the last steps near the top of the mountain are the steepest" (mountain metaphor section) — used to explain diminishing CV gains across legs; not independently measured, but consistent with the numerical table shown.
+
+---
+
+## Source 6: kgmon_playbook.md
+**File:** research/sources/kgmon_playbook.md  
+**Command:** HTTP GET https://raw.githubusercontent.com/cdeotte/KGMON-Playbook-2026/main/README.md  
+**Comment Count:** N/A (GitHub repository)  
+**OmA Coverage:** 1 window, complete=True, 1,317 bytes  
+**Status:** READ
+
+### What the author DID
+
+1. Structured the KGMON Playbook 2026 as a sequence of 7 notebooks covering EDA → Feature Engineering → Baselines → Stacking → Hill Climbing → Pseudo Label → Conclusion.  
+   [QUOTED] source: kgmon_playbook.md "`07_Conclusion.ipynb`: Experiments Experiments Experiments!" (L38, 4 words excluding filename)
+
+2. Published all playbook notebooks publicly on GitHub with explicit step ordering (01 through 07). (L32–L38, [PARAPHRASED])
+
+### Claims made without evidence
+
+1. README implies the playbook is a universal best practice for tabular data competitions; no ablation study comparing the playbook steps against alternatives is included in the README.
