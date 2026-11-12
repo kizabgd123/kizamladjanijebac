@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "halo-filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/home/kizamladjanijebac/verified_notebooks_knowledge"
+      ],
+      "env": {}
+    }
+  }
+}

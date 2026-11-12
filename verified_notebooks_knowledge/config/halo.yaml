@@ -1,0 +1,63 @@
+runtime:
+  mode: dual_speed
+  preset: balanced_production
+
+fast_path:
+  agent_reuse:
+    enabled: true
+    backend: sqlite
+    cache_type: lru_and_persistent
+    db_path: data/agent_reuse_cache.db
+    ttl_seconds: 86400
+    semantic_similarity_threshold: 0.92
+    f1_gate: 0.97
+    max_lru_items: 500
+
+  ars:
+    enabled: true
+    checkpoints: 3
+    thresholds:
+      tau_1_intent: 0.90
+      tau_2_retrieval: 0.85
+      tau_3_faithfulness: 0.80
+
+deep_path:
+  enabled: true
+
+  mcts:
+    rollout_depth: 3
+    simulations: 8
+    exploration_factor: 1.414
+    random_seed: 42
+    max_budget_ms: 10000
+
+  code_as_policies:
+    enabled: true
+    ast_validation: true
+    arbitrary_code_execution: false
+    timeout_ms: 5000
+    memory_limit_mb: 128
+    forbidden_ast_nodes:
+      - Import
+      - ImportFrom
+      - Exec
+      - Eval
+      - DunderAccess
+
+rag:
+  composite_quality_gate: 0.80
+  weights:
+    context_relevance: 0.25
+    answer_faithfulness: 0.35
+    answer_relevance: 0.25
+    noise_robustness: 0.15
+  retrieval:
+    bm25_k1: 1.5
+    bm25_b: 0.75
+    hybrid_dense_weight: 0.5
+    hybrid_sparse_weight: 0.5
+    top_k: 4
+    min_score_cutoff: 0.20
+  corpus:
+    allowlist_manifest: data/corpus_baseline_hashes.sha256
+    source_dir: .

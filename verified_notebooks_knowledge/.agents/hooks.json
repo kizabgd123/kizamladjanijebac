@@ -1,0 +1,25 @@
+{
+  "corpus-integrity-guard": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "python3 scripts/verify_corpus_integrity.py",
+        "timeout": 15
+      }
+    ]
+  },
+  "antigravity-validator": {
+    "PostToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 scripts/validate_antigravity.py --quiet",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
