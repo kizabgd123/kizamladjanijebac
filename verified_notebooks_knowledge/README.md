@@ -172,14 +172,13 @@ pytest tests/ -v
 ## 12. Technical Documentation Index (`docs/`)
 - `docs/BOOTSTRAP_DISCOVERY.md` — Initial workspace audit and baseline facts.
 - `docs/ARCHITECTURE_DECISION.md` — ADR-001 adopting Option C Dual-Speed Engine.
-- `docs/RAG_ARCHITECTURE.md` — 5-stage modular RAG architecture specifications.
-- `docs/RAG_EVALUATION.md` — RAGAS 4-metric formulas and benchmark standards.
-- `docs/DATA_GOVERNANCE.md` — Corpus protection and non-contamination protocols.
-- `docs/AGENT_ORCHESTRATION.md` — Multi-agent workflow and delegation rules.
-- `docs/AGENT_ROLES.md` — Detailed specifications for all 12 agent personas.
-- `docs/WORKFLOW.md` — Milestone execution lifecycle.
+- `docs/BENCHMARK_DATASET.md` — Specification and schema for the 30-case RAG benchmark dataset.
+- `docs/RAG_BENCHMARK_REPORT.md` — Empirical IR and generation evaluation results on 30 benchmark cases.
+- `docs/DUAL_SPEED_BENCHMARK.md` — Performance latency (100 warm runs), memory profiling, and ARS/MCTS bounds.
+- `docs/SECURITY_VALIDATION_REPORT.md` — Detailed AST sandbox, execution policy, and injection resilience audit.
+- `PHASE_2_ACCEPTANCE_REPORT.md` — Independent Phase 2 Production Readiness Acceptance Report.
 - `docs/PROVIDER_CONFIGURATION.md` — LiteLLM and multi-provider setup.
-- `docs/OPEN_DESIGN_QUESTIONS.md` — Audit of unverified theoretical claims (MRMMIA).
+- `docs/OPEN_DESIGN_QUESTIONS.md` — Audit of unverified theoretical claims.
 - `docs/DEVELOPMENT.md` — Developer onboarding and coding guidelines.
 - `docs/OPERATIONS.md` — Deployment and maintenance runbook.
 - `docs/TESTING.md` — Test suite topology and verification procedures.

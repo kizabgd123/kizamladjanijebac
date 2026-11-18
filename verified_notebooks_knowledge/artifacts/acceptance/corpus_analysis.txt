@@ -1,0 +1,80 @@
+Documents:
+  01: 01_Vas_Mozak_Ko_Je_U_Kontroli.md
+    title='🧠 Sveska 1: Vaš Mozak: Ko je u Kontroli? — Neurobi', chunks=4
+      chunk=01_c000: '🧠 Sveska 1: Vaš Mozak: Ko je u Kontroli? — Neurobiološki Mod'
+      chunk=01_c001: '🔬 Verifikovane ključne činjenice i naučni model:'
+      chunk=01_c002: '🔬 Verifikovane ključne činjenice i naučni model:'
+      chunk=01_c003: '🔬 Verifikovane ključne činjenice i naučni model:'
+  02: 02_AI_Native_Transformation_SEE_Digital_Engineering.md
+    title='🤖 Sveska 2: AI Native Transformation in SEE Digita', chunks=3
+      chunk=02_c000: '🤖 Sveska 2: AI Native Transformation in SEE Digital Engineer'
+      chunk=02_c001: '🏢 Uporedna analiza transformacije (Endava vs Levi9):'
+      chunk=02_c002: '🏢 Uporedna analiza transformacije (Endava vs Levi9):'
+  03: 03_Project_OpenClaw_Sovereign_AI_OS.md
+    title='💓 Sveska 3: Project OpenClaw — Suvereni AI OS 2026', chunks=3
+      chunk=03_c000: '💓 Sveska 3: Project OpenClaw — Suvereni AI OS 2026'
+      chunk=03_c001: '🛡️ Arhitektura suverenog AI OS-a (2026):'
+      chunk=03_c002: '🛡️ Arhitektura suverenog AI OS-a (2026):'
+  04: 04_Google_Antigravity_Agentic_IDE.md
+    title='🚀 Sveska 4: Google Anti-gravity: Agentni IDE za Ko', chunks=3
+      chunk=04_c000: '🚀 Sveska 4: Google Anti-gravity: Agentni IDE za Kodiranje'
+      chunk=04_c001: '⚙️ Arhitektura i operativni radni tok IDE platforme:'
+      chunk=04_c002: '⚙️ Arhitektura i operativni radni tok IDE platforme:'
+  05: 05_CodyMaster_Brain_Deterministic_RAG.md
+    title='🧠 Sveska 5: CodyMaster Brain', chunks=3
+      chunk=05_c000: '🧠 Sveska 5: CodyMaster Brain'
+      chunk=05_c001: '🧱 Principi i arhitektura sistema:'
+      chunk=05_c002: '🧱 Principi i arhitektura sistema:'
+  06: 06_Prokrastinacija_Naucna_Analiza_TMT.md
+    title='🧠 Sveska 6: Prokrastinacija - Naučna Analiza', chunks=4
+      chunk=06_c000: '🧠 Sveska 6: Prokrastinacija - Naučna Analiza'
+      chunk=06_c001: '🔬 Naučni modeli, formule i neurobiologija:'
+      chunk=06_c002: '🔬 Naučni modeli, formule i neurobiologija:'
+      chunk=06_c003: '🔬 Naučni modeli, formule i neurobiologija:'
+  07: 07_NotebookLM_Custom_Prompts_Advanced_AI.md
+    title='⚙️ Sveska 7: NotebookLM: Custom Prompts for Advanc', chunks=3
+      chunk=07_c000: '⚙️ Sveska 7: NotebookLM: Custom Prompts for Advanced AI Lear'
+      chunk=07_c001: '🛠️ Strategije i optimizacija Custom instrukcija:'
+      chunk=07_c002: '🛠️ Strategije i optimizacija Custom instrukcija:'
+  08: 08_LinkedIn_Automation_Agent_Brain_Franklin.md
+    title='🤖 Sveska 8: LinkedIn Automation Agent Brain — Eleg', chunks=3
+      chunk=08_c000: '🤖 Sveska 8: LinkedIn Automation Agent Brain — Elegant Frankl'
+      chunk=08_c001: '🚀 Arhitektura autonomnog publishing sistema:'
+      chunk=08_c002: '🚀 Arhitektura autonomnog publishing sistema:'
+  09: 09_Gemini_3_Prompting_Rules_NotebookLM.md
+    title='❓ Sveska 9: Pomoć i Povratne Informacije za Notebo', chunks=3
+      chunk=09_c000: '❓ Sveska 9: Pomoć i Povratne Informacije za NotebookLM'
+      chunk=09_c001: '📝 Zvanična pravila i standardi za Gemini 3 promptovanje:'
+      chunk=09_c002: '📝 Zvanična pravila i standardi za Gemini 3 promptovanje:'
+  10: 10_NLP_Silva_Metod_Neuroplasticnost.md
+    title='🧠 Sveska 10: NLP: Put do Majstorstva', chunks=3
+      chunk=10_c000: '🧠 Sveska 10: NLP: Put do Majstorstva'
+      chunk=10_c001: '🧘 NLP metodologija, Silva metod i neuroplastičnost:'
+      chunk=10_c002: '🧘 NLP metodologija, Silva metod i neuroplastičnost:'
+  11: 11_2026_UI_Design_Principles_Spatial_Computing.md
+    title='🎨 Sveska 11: 2026 UI Design Principles and Strateg', chunks=3
+      chunk=11_c000: '🎨 Sveska 11: 2026 UI Design Principles and Strategic Best Pr'
+      chunk=11_c001: '📐 Ključni dizajnerski principi i standardi 2026:'
+      chunk=11_c002: '📐 Ključni dizajnerski principi i standardi 2026:'
+  12: 12_Duboko_Ucenje_i_Vestacka_Inteligencija.md
+    title='🤖 Sveska 12: Duboko učenje i veštačka inteligencij', chunks=4
+      chunk=12_c000: '🤖 Sveska 12: Duboko učenje i veštačka inteligencija: Vodič'
+      chunk=12_c001: '🧠 Principi veštačke inteligencije, mašinskog učenja i neuron'
+      chunk=12_c002: '🧠 Principi veštačke inteligencije, mašinskog učenja i neuron'
+      chunk=12_c003: '🧠 Principi veštačke inteligencije, mašinskog učenja i neuron'
+  13: 13_Vestina_Pametnog_Odlucivanja_7_Koraka.md
+    title='🧠 Sveska 13: Veština pametnog odlučivanja: 7 korak', chunks=3
+      chunk=13_c000: '🧠 Sveska 13: Veština pametnog odlučivanja: 7 koraka do jasno'
+      chunk=13_c001: '⚡ 7 koraka do jasnoće i efikasnog odlučivanja:'
+      chunk=13_c002: '⚡ 7 koraka do jasnoće i efikasnog odlučivanja:'
+  14: 14_Strategija_Licnog_Brenda_Inbound_Funnel.md
+    title='🚀 Sveska 14: Strategija ličnog brenda: Put od prat', chunks=3
+      chunk=14_c000: '🚀 Sveska 14: Strategija ličnog brenda: Put od pratioca do pr'
+      chunk=14_c001: '💼 Sistem dolaska do High-Ticket klijenata bez hladnog outrea'
+      chunk=14_c002: '💼 Sistem dolaska do High-Ticket klijenata bez hladnog outrea'
+  15: 15_Strategic_Communication_and_Self_Positioning.md
+    title='🧠 Sveska 15: Strategic Communication and Self-Posi', chunks=3
+      chunk=15_c000: '🧠 Sveska 15: Strategic Communication and Self-Positioning wi'
+      chunk=15_c001: '🧘 Principi strateške komunikacije i pozicioniranja:'
+      chunk=15_c002: '🧘 Principi strateške komunikacije i pozicioniranja:'
+Total chunks: 48

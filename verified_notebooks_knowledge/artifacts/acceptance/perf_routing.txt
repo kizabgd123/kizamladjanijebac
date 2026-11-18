@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<string>", line 34, in <module>
+  File "/home/kizamladjanijebac/verified_notebooks_knowledge/src/core/runtime_router.py", line 103, in route_and_execute
+    cached_plan, similarity = self.agent_reuse.lookup_plan(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kizamladjanijebac/verified_notebooks_knowledge/src/core/agent_reuse.py", line 231, in lookup_plan
+    cursor.execute("""
+sqlite3.OperationalError: no such table: plan_cache

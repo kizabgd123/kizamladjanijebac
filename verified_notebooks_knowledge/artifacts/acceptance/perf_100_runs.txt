@@ -1,0 +1,33 @@
+=== EXTENDED PERFORMANCE BENCHMARK (100 WARM INVOCATIONS) ===
+Benchmark Date: 2026-11-18 00:50:14 UTC
+Sample Size: N = 100 consecutive invocations
+Target Query: 'Koji su nivoi CodyMaster L0-L3 arhitekture i šta tačno obuhvata L0 nivo?'
+
+LATENCY DISTRIBUTION:
+  Cold Start Latency: 98.76 ms (channel: deep_path)
+  Warm p50 (Median):   4.288 ms
+  Warm p95:            5.811 ms
+  Warm p99:            7.111 ms
+  Warm Mean:           4.474 ms (± 0.638 ms)
+  Warm Min:            3.743 ms
+  Warm Max:            7.111 ms
+
+CACHE & ROUTING EFFICIENCY:
+  Fast-Path Hit Rate:  100.0% (100/100)
+  Paraphrase Query:    Routed to 'deep_path' in 83.54 ms (Threshold: 0.92 enforced)
+
+MEMORY FOOTPRINT (tracemalloc):
+  Current Traced Memory: 12.63 KB
+  Peak Traced Memory:    53.62 KB
+
+ARS CERTAINTY GATES:
+  CP1 (tau_1 = 0.90): Verified (At threshold: True, Below: False, Safety Bypass: True)
+  CP2 (tau_2 = 0.85): Verified (At threshold: True, Below: False)
+  CP3 (tau_3 = 0.80): Verified (At threshold: True, Below: False)
+  Confidence Calibration: Lexical bigram similarity only; no statistical calibration.
+
+MCTS BOUNDS & DETERMINISM:
+  Deterministic (seed=42): True
+  Max Depth Bound (<=3):  True (actual depth: 3)
+  Simulations Bound (=8): True (actual: 8)
+  Budget Enforcement:     True (budget: 2ms, elapsed: 2.02 ms)

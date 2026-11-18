@@ -1,0 +1,38 @@
+{
+  "cold_latency_ms": 98.757,
+  "warm_runs_n": 100,
+  "fast_path_hits": 100,
+  "hit_rate_pct": 100.0,
+  "latency_stats_ms": {
+    "min": 3.743,
+    "max": 7.111,
+    "mean": 4.474,
+    "std": 0.638,
+    "p50": 4.288,
+    "p95": 5.811,
+    "p99": 7.111
+  },
+  "memory_tracemalloc_kb": {
+    "current": 12.63,
+    "peak": 53.62
+  },
+  "paraphrase_channel": "deep_path",
+  "ars_checkpoints": {
+    "cp1_at_tau": true,
+    "cp1_below_tau": true,
+    "cp1_safety_bypass": true,
+    "cp2_at_tau": true,
+    "cp2_below_tau": true,
+    "cp3_at_tau": true,
+    "cp3_below_tau": true
+  },
+  "mcts_verification": {
+    "deterministic": true,
+    "depth_bounded": true,
+    "simulations_bounded": true,
+    "timeout_bounded": true,
+    "simulations_count": 8,
+    "trajectory_depth": 3,
+    "timeout_elapsed_ms": 2.02
+  }
+}

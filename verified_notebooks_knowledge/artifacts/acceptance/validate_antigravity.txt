@@ -1,0 +1,34 @@
+=== Validating Antigravity Customizations (.agents/) ===
+  [AGENT OK] orchestrator
+  [AGENT OK] planner
+  [AGENT OK] researcher
+  [AGENT OK] architect
+  [AGENT OK] rag-engineer
+  [AGENT OK] agent-engineer
+  [AGENT OK] integration-engineer
+  [AGENT OK] implementer
+  [AGENT OK] qa-tester
+  [AGENT OK] code-reviewer
+  [AGENT OK] security-auditor
+  [AGENT OK] documentation-agent
+  [SKILL OK] project-bootstrap
+  [SKILL OK] system-diagnostics
+  [SKILL OK] corpus-ingestion
+  [SKILL OK] rag-development
+  [SKILL OK] rag-evaluation
+  [SKILL OK] dual-speed-orchestration
+  [SKILL OK] litellm-integration
+  [SKILL OK] testing-validation
+  [SKILL OK] security-audit
+  [SKILL OK] documentation-maintenance
+  [RULE OK] evidence-and-truth.md (trigger: always_on)
+  [RULE OK] architecture.md (trigger: always_on)
+  [RULE OK] python-quality.md (trigger: glob)
+  [RULE OK] rag-data-governance.md (trigger: glob)
+  [RULE OK] agent-orchestration.md (trigger: model_decision)
+  [RULE OK] security-and-secrets.md (trigger: always_on)
+  [RULE OK] testing-and-evaluation.md (trigger: glob)
+  [HOOKS OK] hooks.json conforms to official Antigravity schema
+  [MCP OK] mcp_config.json verified
+
+✅ SUCCESS: All 31 Antigravity customization checks passed!

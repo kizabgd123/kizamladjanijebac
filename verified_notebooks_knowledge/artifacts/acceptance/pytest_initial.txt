@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0 -- /home/kizamladjanijebac/verified_notebooks_knowledge/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/kizamladjanijebac/verified_notebooks_knowledge
+configfile: pyproject.toml
+plugins: cov-7.1.0
+collecting ... collected 35 items
+
+tests/test_agent_reuse.py::test_compute_text_similarity PASSED           [  2%]
+tests/test_agent_reuse.py::test_agent_reuse_store_and_hit PASSED         [  5%]
+tests/test_agent_reuse.py::test_agent_reuse_miss PASSED                  [  8%]
+tests/test_agent_reuse.py::test_agent_reuse_ttl_expiration PASSED        [ 11%]
+tests/test_agent_reuse.py::test_agent_reuse_stale_corpus_invalidation PASSED [ 14%]
+tests/test_agent_reuse.py::test_persistent_cache_recovery PASSED         [ 17%]
+tests/test_ars_early_exit.py::test_checkpoint_1_early_exit PASSED        [ 20%]
+tests/test_ars_early_exit.py::test_checkpoint_1_escalation PASSED        [ 22%]
+tests/test_ars_early_exit.py::test_checkpoint_2_early_exit PASSED        [ 25%]
+tests/test_ars_early_exit.py::test_checkpoint_2_escalation PASSED        [ 28%]
+tests/test_ars_early_exit.py::test_checkpoint_3_synthesis_commit PASSED  [ 31%]
+tests/test_ars_early_exit.py::test_checkpoint_3_overthinking_rejection PASSED [ 34%]
+tests/test_ars_early_exit.py::test_safety_critical_bypass PASSED         [ 37%]
+tests/test_ars_early_exit.py::test_invalid_confidence_values PASSED      [ 40%]
+tests/test_cap_sandbox.py::test_allow_safe_constructs PASSED             [ 42%]
+tests/test_cap_sandbox.py::test_reject_import PASSED                     [ 45%]
+tests/test_cap_sandbox.py::test_reject_import_from PASSED                [ 48%]
+tests/test_cap_sandbox.py::test_reject_exec_and_eval PASSED              [ 51%]
+tests/test_cap_sandbox.py::test_reject_open_call PASSED                  [ 54%]
+tests/test_cap_sandbox.py::test_reject_dunder_attribute_traversal PASSED [ 57%]
+tests/test_cap_sandbox.py::test_runtime_syntax_error PASSED              [ 60%]
+tests/test_litellm_and_providers.py::test_provider_registry_loading PASSED [ 62%]
+tests/test_litellm_and_providers.py::test_deterministic_mock_provider_generation PASSED [ 65%]
+tests/test_litellm_and_providers.py::test_environment_variable_resolution PASSED [ 68%]
+tests/test_mcts_bounded.py::test_mcts_bounded_depth_and_simulations PASSED [ 71%]
+tests/test_mcts_bounded.py::test_mcts_timeout_budget PASSED              [ 74%]
+tests/test_mcts_bounded.py::test_mcts_deterministic_seed PASSED          [ 77%]
+tests/test_metrics_formulas.py::test_composite_score_formula PASSED      [ 80%]
+tests/test_metrics_formulas.py::test_faithfulness_critical_floor_rejection PASSED [ 82%]
+tests/test_metrics_formulas.py::test_evaluator_lexical_calculations PASSED [ 85%]
+tests/test_rag_pipeline_and_citations.py::test_pipeline_indexed_all_15_documents PASSED [ 88%]
+tests/test_rag_pipeline_and_citations.py::test_actual_retrieval_and_citation_pointers PASSED [ 91%]
+tests/test_rag_pipeline_and_citations.py::test_citation_formatting PASSED [ 94%]
+tests/test_runtime_router.py::test_dual_speed_routing_fast_and_deep_path PASSED [ 97%]
+tests/test_runtime_router.py::test_safety_critical_rejection_and_deep_path PASSED [100%]
+
+============================== 35 passed in 2.56s ==============================
